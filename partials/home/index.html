@@ -1,0 +1,17 @@
+<div layout-gt-sm="row">
+  <md-input-container class="md-block" flex-gt-sm="">
+    <label>Veiculo</label>
+    <md-icon md-svg-src="img/ic_directions_car_black_24px.svg"></md-icon>
+    <md-select ng-model="vm.vehicle" required>
+      <md-option ng-repeat="vehicle in vm.vehicles" ng-value="vehicle">
+        {{ vehicle.model }}
+      </md-option>
+    </md-select>
+  </md-input-container>
+</div>
+
+<md-input-container class="md-block">
+  <label>Anotação</label>
+  <md-icon md-svg-src="img/ic_speaker_notes_black_24px.svg"></md-icon>
+  <textarea name="note" ng-model="vm.vehicle.note" disabled></textarea>
+</md-input-container>

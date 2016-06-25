@@ -1,0 +1,67 @@
+<p class="md-title">coleção de carros <small class="md-caption">salvar veiculo</small>.</p>
+<div layout="column">
+  <br>
+
+  <form name="vehicleForm" ng-submit="vm.save()" novalidate>
+
+    <div layout-gt-sm="row">
+      <md-input-container class="md-icon-float">
+        <label>Modelo</label>
+        <md-icon md-svg-src="img/ic_edit_black_24px.svg"></md-icon>
+        <input name="model" ng-model="vm.vehicle.model" type="text" required>
+        <div ng-messages="vehicleForm.model.$error">
+          <div ng-message="required">Campo obrigat&oacute;rio.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Tipo</label>
+        <md-icon md-svg-src="img/ic_edit_black_24px.svg"></md-icon>
+        <md-select name="type" ng-model="vm.vehicle.type" required>
+          <md-option ng-repeat="type in vm.vehicle.types" ng-value="type">
+            {{ type }}
+          </md-option>
+        </md-select>
+        <div ng-messages="vehicleForm.type.$error">
+          <div ng-message="required">Campo obrigat&oacute;rio.</div>
+        </div>
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm="">
+        <label>Fabricante</label>
+        <md-icon md-svg-src="img/ic_edit_black_24px.svg"></md-icon>
+        <md-select name="manufacturer" ng-model="vm.vehicle.manufacturer" required>
+          <md-option ng-repeat="manufacturer in vm.vehicle.manufacturers" ng-value="manufacturer">
+            {{ manufacturer.name }}
+          </md-option>
+        </md-select>
+        <div ng-messages="vehicleForm.manufacturer.$error">
+          <div ng-message="required">Campo obrigat&oacute;rio.</div>
+        </div>
+      </md-input-container>
+    </div>
+
+    <md-input-container class="md-block">
+      <label>Anotação</label>
+      <md-icon md-svg-src="img/ic_edit_black_24px.svg"></md-icon>
+      <textarea name="note" ng-model="vm.vehicle.note" md-maxlength="150" rows="5" required></textarea>
+      <div ng-messages="vehicleForm.note.$error">
+        <div ng-message="required">Campo obrigat&oacute;rio.</div>
+      </div>
+    </md-input-container>
+
+    <br>
+
+    <div layout="row" layout-align="start center" style="height: 100px;">
+      <md-button aria-label="Add Vehicle" href="#veiculos">
+        <md-icon md-svg-icon="img/ic_arrow_back_24px.svg"></md-icon> Voltar
+      </md-button>
+
+      <md-button class="md-raised md-primary" ng-disabled="vehicleForm.$invalid" ng-click="vm.save()">
+        <md-icon md-svg-icon="img/ic_check_circle_24px.svg"></md-icon> Enviar
+      </md-button>
+    </div>
+
+  </form>
+</div>
+</section>

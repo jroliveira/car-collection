@@ -1,0 +1,32 @@
+{
+  "name": "car-collection",
+  "version": "0.0.1",
+  "description": "POC de um CRUD feita em angular.",
+  "homepage": "https://github.com/jroliveira/car-collection#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jroliveira/car-collection.git"
+  },
+  "author": {
+    "name": "Junior Oliveira",
+    "email": "junolive@gmail.com",
+    "url": "http://jroliveira.net"
+  },
+  "bugs": {
+    "url": "https://github.com/jroliveira/car-collection/issues"
+  },
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "angular": "~1.5.7",
+    "angular-animate": "~1.5.7",
+    "angular-aria": "~1.5.7",
+    "angular-flash-messages": "~1.2.0",
+    "angular-material": "~1.0.9",
+    "angular-messages": "~1.5.7",
+    "angular-mocks": "~1.5.7",
+    "angular-resource": "~1.5.7",
+    "angular-route": "~1.5.7",
+    "angular-validation-match": "~1.9.0"
+  },
+  "devDependencies": {}
+}

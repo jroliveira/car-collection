@@ -1,0 +1,31 @@
+<p class="md-title">coleção de carros <small class="md-caption">fabricantes</small>.</p>
+
+<div layout="row" layout-align="start center">
+  <md-button aria-label="Add Manufacturer" href="#fabricante/criar">
+    <md-icon md-svg-icon="img/ic_add_circle_black_24px.svg"></md-icon> Cadastrar fabricante.
+  </md-button>
+</div>
+
+<br>
+
+<section class="md-whiteframe-z1">
+  <md-toolbar class="md-primary md-default-theme panel">
+    <div class="md-toolbar-tools">
+      <h3>Fabricantes cadastradas</h3>
+      <span flex=""></span>
+    </div>
+  </md-toolbar>
+
+  <md-list-item layout-padding class="md-2-line" ng-repeat="manufacturer in vm.manufacturers">
+    <md-icon md-svg-src="img/ic_location_city_black_24px.svg"></md-icon>
+    <div class="md-list-item-text">
+      <h3> {{ manufacturer.name }} </h3>
+    </div>
+    <md-button class="md-icon-button md-primary" aria-label="Edit" href="#fabricante/editar/{{ manufacturer.id }}">
+      <md-icon md-svg-icon="img/ic_edit_24px.svg"></md-icon>
+    </md-button>
+    <md-button class="md-icon-button md-warn" aria-label="Delete" ng-click="vm.delete(manufacturer)">
+      <md-icon md-svg-icon="img/ic_delete_24px.svg"></md-icon>
+    </md-button>
+  </md-list-item>
+</section>
